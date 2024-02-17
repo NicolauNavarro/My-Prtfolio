@@ -612,11 +612,11 @@ small{
         font-size: 1.125rem;
         pointer-events: none;
     }
-    h6{
+    p{
         font-size: 1rem;
         pointer-events: none;
     }
-    p{
+    small{
         font-size: 0.889rem;
         pointer-events: none;
     }
@@ -635,15 +635,18 @@ body{
     border-radius: 8px;
     margin-bottom: -7px;
     cursor:default;
+    transition: 0.1s ease;
+    scale: 0.8;
+    margin-left: -10px;
 }
 .title .textcontiner .goAction:hover{
     box-shadow: none;
-    scale: 1;
+    scale: 0.8;
     background-color: var(--background);
 }
 .title .textcontiner .goAction:active{
     box-shadow: 0px 0px 12px 3px var(--layer);
-    scale: 1.2;
+    scale: 0.9;
     background-color: #323232;
 }
 .title{
@@ -652,13 +655,15 @@ body{
     width: 100%;
     left: 0px;
     top: 0px;
-    padding: 40px;
+    padding: 20px 20px;
     z-index: 10;
     background-color: var(--background);
+    gap: 0px;
 }
 .title .textcontiner{
     height: fit-content;
     position: unset;
+    gap: 10px;
 }
 .representations{
     width: 336px;
@@ -672,7 +677,9 @@ body{
     margin-left: -112px;
     margin-bottom: -40vh;
 }
-
+.drawing .name p{
+    font-size: 1.266rem;
+}
 
 
 }

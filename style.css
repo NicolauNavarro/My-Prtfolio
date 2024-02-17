@@ -635,7 +635,7 @@ body{
     border-radius: 8px;
     margin-bottom: -7px;
     cursor:default;
-    transition: 0.1s ease;
+    transition: 0s ease;
     scale: 0.8;
     margin-left: -10px;
 }
@@ -646,7 +646,6 @@ body{
 }
 .title .textcontiner .goAction:active{
     box-shadow: 0px 0px 12px 3px var(--layer);
-    scale: 0.9;
     background-color: #323232;
 }
 .title{
@@ -664,13 +663,15 @@ body{
     height: fit-content;
     position: unset;
     gap: 10px;
+    padding-top: 10px;
 }
 .representations{
     width: 336px;
 }
 .drawing{
+    padding-bottom: 224px;
     width: 336px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .drawing .AdaptativeContiner{
     scale: 0.6;

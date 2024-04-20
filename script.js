@@ -22,7 +22,7 @@ function magicCardHide(){
     magicBtnTitle.style.transform= 'translateY(15px)'
 }
 */
-
+/*
 const contactBtn = document.querySelector('#contactBtn')
 const projectsBtn = document.querySelector('#projectsBtn')
 const btnCovers = document.querySelectorAll('.cover')
@@ -46,7 +46,7 @@ function projectsSelect(){
     contactBtn.style.boxShadow='0px 0px 3px var(--gray)'
     projectsBtn.style.boxShadow='0px 0px 4px 1px var(--gray)'
 }
-
+*/
 
 
 

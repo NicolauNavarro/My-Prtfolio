@@ -52,6 +52,7 @@
     --orange: #f59e0b;
     --purple: #8b5cf6;
     --box-shadow: 0 4px 28px rgba(0, 0, 0, 0.18);
+    --transparent-bkg: rgb(250, 250, 250, 0.52);
 }
 h1{
     font-size: 2.986rem;
@@ -80,6 +81,7 @@ h6{
 }
 p{
     font-size: 1rem;
+    color: var(--gray);
 }
 small{
     font-size: 0.833rem;
@@ -94,7 +96,7 @@ body{
     font-weight: 500;
     font-style: normal;
     background-color: var(--background);
-    color: black;
+    color: var(--black);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -105,7 +107,7 @@ body{
     height: 0px;
 }
 .transparent{
-    background: rgb(250, 250, 250, 0.52);
+    background: var(--transparent-bkg);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 4px 28px rgba(0, 0, 0, 0.18);
@@ -122,52 +124,27 @@ button{
     background-color: var(--white);
     color: var(--black);
     cursor: pointer;
-    transition: 0.2s ease;
-    box-shadow: 0px 0px 6px var(--gray);
-}
-button:hover{
-    box-shadow: var(--box-shadow);
-}
-
-
-
-
-
-
-/*
-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    border-radius: 22px;
-    background-color: var(--white);
-    box-shadow: 0px 0px 3px var(--gray);
-    outline: none;
-    border: none;
-    color: var(--black);
-    font-weight: bold;
-    line-height: 0px;
-    border-spacing: 0px;
-    line-height: 0px;
-    width: 200px;
-    cursor: pointer;
+    border: 2px solid var(--gray);
+    border-bottom: 4px solid var(--gray);
     transition: 0.2s ease;
 }
 button:hover{
-    box-shadow: 0px 0px 6px var(--gray);
-}
-.darkBtn{
     background-color: var(--black);
     color: var(--white);
-    box-shadow: 0px 0px 4px 1px var(--gray);
-}*/
-
+}
+.black-btn{
+    background-color: var(--black);
+    color: var(--white);
+}
+.black-btn:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
 .flex{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
 }
 .main{
     width: 100%;
@@ -180,9 +157,57 @@ button:hover{
     animation: --fade-out linear forwards;
     animation-timeline: view();
     animation-range: exit 10px;
+    text-align: center;
+    position: relative;
 }
 @keyframes --fade-out{
     55%, 100%{opacity: 0;}
+}
+.carousel{
+    position: absolute;
+    top: 22px;
+    left: -40px;
+    max-width: 100vw;
+    width: 100vw;
+    height: 20vh;
+    padding: 0px 20px;
+    gap: 15px;
+    align-items: flex-start;
+}
+.carousel .card{
+    height: 100%;
+    width: 30vw;
+    color: var(--gray);
+    background-color: var(--light-gray);
+    padding: 15px 20px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.carousel .card:hover{
+    scale: 1.07;
+    z-index: 6;
+    height: calc(100% + 45px);
+    color: var(--black);
+    background-color: var(--white);
+}
+.carousel .card p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: var(--black);
+}
+.carousel .card small{
+    text-align: left;
+    color: var(--gray);
+}
+.carousel .card button{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 5;
+    opacity: 0;
+}
+.carousel .card:hover button{
+    opacity: 1;
 }
 .shadow{
     width: 570px;
@@ -194,120 +219,21 @@ button:hover{
     position: absolute;
     z-index: -3;
 }
-.section{
-    width: 100%;
-    padding: 20px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-direction: column;
-    animation: --fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: enter;
-    opacity: 0;
-    margin-bottom: 80px;
-}
-@keyframes --fade-in{
-    40%, 100%{opacity: 1;}
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-    background: rgb(250, 250, 250, 0.52);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
-    border-radius: 12px;
-    height: 470px;
-    width: 340px;
-    position: relative;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-}
-.cardwidth{
-    width: 710px;
-}
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 6px;
-    text-align: center;
-    margin-bottom: 17px;
-}
-.magic-card{
-    position: absolute;
-    margin-bottom: 45px;
-    height: 265px;
-    width: 900px;
-    transform: rotate3d(1, 0, 0, 90deg) translateY(-260px);
-    transition: 0.4s ease;
-    background: rgb(250, 250, 250, 0.52);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    outline: 0 4px 28px rgba(0, 0, 0, 0.18);
-}
-.magic-card::after{
-    content: '';
-    position: absolute;
-    width: 900px;
-    height: 11px;
-    left: 0;
-    bottom: -11px;
-}
-#magicBtnTitle{
-    opacity: 0;
-    transition: 0.4s 0.4s ease;
-    transform: translateY(15px);
-}
-.magic-card .square{
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    border: 2px solid #aaaaaa7f;
-    cursor: pointer;
-    transition: 0.1s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    background: rgb(250, 250, 250, 0.28);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    opacity: 0.7;
-}
-.magic-card .square:hover{
-    background: rgb(250, 250, 250, 0.28);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    opacity: 0.9;
-}
-.magic-card .square span{
-    font-size: 80px;
-    font-weight: 600;
-}
 .quick{
     position: sticky;
     width: 500px;
     height: 70px;
-    border-radius: 25px;
-    box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.13);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 80px;
+    border-radius: 25px;
     z-index: 50;
     transform: translateY(-110px);
-    top: 130px;
+    top: 125px;
     animation: --bigger-nav linear forwards;
     animation-timeline: scroll();
     animation-range: 45vh 95vh;
-    margin-bottom: 80px;
 }
 @keyframes --bigger-nav{
     to{width: 700px; border-radius: 15px; height: 60px;}
@@ -326,9 +252,9 @@ button:hover{
     opacity: 0.6;
 }
 .quick span:hover{
-    background-color: white;
+    background-color: var(--white);
     opacity: 0.8;
-    box-shadow: 0px 0px 2px 18px rgba(0, 0, 0, 0.08);;
+    box-shadow: 0px 0px 2px 18px rgba(37, 37, 37, 0.085);;
 }
 .quick .apearIcon{
     opacity: 1;
@@ -342,76 +268,55 @@ button:hover{
     0%, 95%{opacity: 0;}
     100%{margin: 0px; opacity: 0.6; width: 60px;}
 }
-
-
-.carousel{
-    position: absolute;
-    top: 22px;
-    left: -40px;
-    max-width: 100vw;
-    width: 100vw;
-    height: 20vh;
-    padding: 0px 20px;
-    gap: 15px;
-    align-items: flex-start;
-}
-.carousel .card{
-    height: 100%;
-    width: 30vw;
-    padding: 15px 20px;
-    transition: 0.2s ease;
-    cursor: pointer;
-    color: var(--gray);
-}
-.carousel .card:hover{
-    scale: 1.08;
-    z-index: 6;
-    height: calc(100% + 45px);
-    color: var(--black);
-}
-.carousel .card p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-}
-.carousel .card small{
-    text-align: left;
-    color: var(--gray);
-}
-.carousel .card button{
+.section{
     width: 100%;
-    font-size: 1rem;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    animation: --fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: enter;
     opacity: 0;
-    transition: 0.2s ease;
-    z-index: 5;
+    margin-bottom: 100px;
+    transform: translateY(90px);
 }
-.carousel .card:hover button{
-    opacity: 1;
+@keyframes --fade-in{
+    40%, 100%{opacity: 1; transform: translateY(0px);}
 }
-.carousel .card button:hover{
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.main button{
+.card{
     position: relative;
-    overflow: hidden;
-    transition: 0.6s 0.2s ease-in;
-}
-.main button h6{
-    z-index: 3;
-}
-.main button .cover{
-    width: 105%;
-    height: 100%;
-    background-color: var(--black);
-    left: -105%;
-    top: 0;
-    position: absolute;
-    z-index: 2;
-    transition: 0.6s 0.2s ease;
-}
-.main .darkBtn .cover{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 470px;
+    width: 340px;
+    border-radius: 10px;
     background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 20px 18px;
+    overflow: hidden;
+}
+.doble-card{
+    width: 705px;
+}
+.tripple-card{
+    width: 1070px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: -4px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .title{
+    align-items: flex-start;
 }
 .card .window{
     width: 550px;
@@ -420,13 +325,15 @@ button:hover{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     z-index: 9;
+    padding: 15px;
     position: absolute;
     bottom: 35px;
     left: 70px;
     padding-top: 35px;
     gap: 8px;
+    overflow: hidden;
+    background-color: var(--white);
 }
 .card .window::after{
     content: '';
@@ -440,23 +347,12 @@ button:hover{
 .card .window::before{
     content: '';
     position: absolute;
-    width: 7px;
+    width: 6px;
     height: 6px;
-    border-radius: 50%;
+    border-radius: 3px;
     background-color: var(--gray);
     top: 7px;
     left: 10px;
-}
-.section .card h6{
-    margin-bottom: -6px;
-}
-.section .card p{
-    color: var(--gray);
-}
-.section .card{
-    padding: 22px 18px;
-    overflow: hidden;
-    background-color: white;
 }
 .card .showcase{
     position: absolute;
@@ -468,12 +364,9 @@ button:hover{
     border: 4px solid var(--light-gray);
 }
 
-.see{
-    background: rgb(250, 250, 250, 0.52);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.18);
-}
+
+
+
 
 
 

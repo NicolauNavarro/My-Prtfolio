@@ -9,8 +9,9 @@
 </head>
 <body>
 
-
-<div class="main" style="text-align: center; position: relative;">
+<!--Main page-->
+<div class="main">
+    <!--Projects carousel at the top-->
     <div class="flex carousel">
         <div class="card">
             <p>Naighborhood web</p>
@@ -43,40 +44,27 @@
             <button>See project</button>
         </div>
     </div>
+
+    <!--Title-->
     <h6 style="margin-bottom: -20px; opacity: 0.7; margin-top: 85px;">Nicolau Navarro Arroyo</h6>
     <h1 class="roboto-bold">Designing and developing for passion<br>in constant contact with innovation</h1>
     <h5 style="color: var(--gray); font-weight: bold; margin-top: -5px; margin-bottom: 3px;">Nicolau is a designer and developer in constant learning<br>always creating new skills and implementing them daily</h5>
+    
+    <!--Action btns-->
     <div class="flex" style="margin-top: 3px;">
-        <button class="darkBtn" id="contactBtn"><h6>Contact</h6><div class="cover"></div></button>
-        <button style="width: 300px;" onmouseenter="projectsSelect()" onmouseleave="contactSelect()" id="projectsBtn"><h6>See projects</h6><div class="cover"></div></button>
+        <button><h6>Contact</h6></button>
+        <button style="width: 300px;"><h6>See projects</h6></button>
     </div>
+
+    <!--Main page shadows-->
     <div class="shadow" style="left: -150px; bottom: 2px; transform: rotate(20deg); opacity: 0.7;"></div>
     <div class="shadow" style="left: 300px; bottom: -80px; transform: rotate(50deg); opacity: 0.6;"></div>
     <div class="shadow" style="right: -150px; bottom: -20px; transform: rotate(-30deg); opacity: 0.7;"></div>
     <div class="shadow" style="right: 400px; top: -140px; transform: rotate(-30deg); opacity: 0.7;"></div>
-    <div class="card magic-card" style="display: none;">
-        <div class="title" id="magicBtnTitle" style="position: absolute; bottom: 280px; gap: 1px; pointer-events: none;">
-            <h2>Contact me for whatever you need</h2>
-            <h3>From buissnes to asking recomendation</h3>
-        </div>
-        <div class="flex" style="height: 100%; width: 100%;">
-            <div class="square">
-                <span class="material-symbols-outlined">work</span>
-                <h4 class="roboto-black">Buisness</h4>
-            </div>
-            <div class="square">
-                <span class="material-symbols-outlined">psychology_alt</span>
-                <h4 class="roboto-black">Question</h4>
-            </div>
-            <div class="square">
-                <span class="material-symbols-outlined">graphic_eq</span>
-                <h4 class="roboto-black">Other</h4>
-            </div>
-        </div>
-    </div>
 </div>
 
-<div class="quick see">
+<!--Nav bar-->
+<div class="transparent quick">
     <span class="material-symbols-outlined apearIcon" style="margin-right: -40px;">expand_less</span>
     <span class="material-symbols-outlined">phone</span>
     <span class="material-symbols-outlined">library_books</span>
@@ -86,25 +74,27 @@
     <span class="material-symbols-outlined apearIcon" style="margin-left: -40px; ">expand_more</span>
 </div>
 
-
-
-
+<!--1st section-->
 <div class="section">
     <div class="title">
         <h2>Making totaly custom projects</h2>
         <h3>Understanding each project's mission</h3>
     </div>
-    <div class="flex" style="gap: 25px;">
+    <div class="flex">
         <div class="card">
-            <h6>Starting from zero</h6>
-            <p>No templates, no copies, just blank</p>
+            <div class="title">
+                <h6>Starting from zero</h6>
+                <p>No templates, no copies, just blank</p>
+            </div>
             <div class="window">
                 <p style="font-weight: bold;"><___________</p>
             </div>
         </div>
-        <div class="card cardwidth">
-            <h6>Builded based on brand identity</h6>
-            <p>For a brand recognision in seconds, from colors to fonts</p>
+        <div class="card doble-card">
+            <div class="title">
+                <h6>Builded based on brand identity</h6>
+                <p>For a brand recognision in seconds, from colors to fonts</p>
+            </div>
             <div class="card showcase">
                 
             </div>
@@ -112,16 +102,23 @@
     </div>
 </div>
 
+<!--2nd section-->
 <div class="section">
     <div class="title">
-        <h2>Loving the process over all</h2>
-        <h3>Because the real beauty is hidden there</h3>
+        <h2>Focusing on the process</h2>
+        <h3>Because thats where progress is</h3>
     </div>
-    <div class="card" style="width: calc(340px + 25px + 710px);">
-        <h6>A final product where every step counts</h6>
-        <p>every part of the process is elaborated in total armony with the rest of the project</p>
+    <div class="flex">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
     </div>
 </div>
+
+
+
+
+
 
 <div class="section" style="height: 200vh;"></div>
 

@@ -1,7 +1,7 @@
-const body = document.querySelector('body')
-window.addEventListener('load', () => {
-    body.style.height='fit-content'
-    body.style.opacity='1'
+const body = document.querySelector("body");
+window.addEventListener("load", () => {
+  body.style.height = "fit-content";
+  body.style.opacity = "1";
 });
 
 /*
@@ -47,7 +47,3 @@ function projectsSelect(){
     projectsBtn.style.boxShadow='0px 0px 4px 1px var(--gray)'
 }
 */
-
-
-
-

@@ -195,7 +195,11 @@ button:hover {
 }
 .carousel .card p {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--gray);
+  transition: 0.1s ease;
+}
+.carousel .card:hover p{
   color: var(--black);
 }
 .carousel .card small {
@@ -258,7 +262,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: 0.1s ease;
+  transition: 0.1s ease-out;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -393,18 +397,8 @@ button:hover {
   font-weight: 900;
   font-style: normal;
 }
-.test {
-  color: var(--light-gray);
-}
 
-/*
-body
-Nav bar
-main section
-title
-sections
-3 types title and subtitles
-continers with shadows
-btns
-footer
-*/
+
+
+
+

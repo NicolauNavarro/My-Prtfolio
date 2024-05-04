@@ -47,3 +47,36 @@ function projectsSelect(){
     projectsBtn.style.boxShadow='0px 0px 4px 1px var(--gray)'
 }
 */
+
+//All sections from page
+const sections = document.querySelectorAll(".section");
+const section1 = sections[0].getBoundingClientRect().top
+const section2 = sections[1].getBoundingClientRect().top
+const section3 = sections[2].getBoundingClientRect().top
+const windowPosition = window.innerHeight
+
+const goDownNav = document.querySelector("#goDownNav");
+const goUpNav = document.querySelector("#goUpNav");
+
+goUpNav.addEventListener("click", goUpperSection);
+goDownNav.addEventListener("click", goUnderSection);
+
+function goUpperSection() {
+  window.alert('Hello world')
+  let tryes = 0
+  while (sections.length >= tryes) {
+    
+    tryes =+ 1
+  }
+}
+
+function goUnderSection() {
+  window.alert(windowPosition.top);
+}
+
+
+
+
+
+
+
